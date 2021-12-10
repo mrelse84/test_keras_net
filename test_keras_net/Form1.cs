@@ -81,7 +81,7 @@ namespace test_keras_net
             var pred = slr_model.Predict(x_slr);
             if (sw.IsRunning) sw.Stop(); // 시간 측정 끝
             float[] res = pred.GetData<float>();
-            string strResult = string.Format("Result : {0} (Elapsed Time : {1:0.000} [msec])", model_file, sw.ElapsedTicks / Stopwatch.Frequency * 1E3);
+            string strResult = string.Format("Result : {0} (Elapsed Time : {1:0.000} [msec])", res[0], sw.ElapsedTicks / Stopwatch.Frequency * 1E3);
             lblResult.Text = strResult;
         }
 
@@ -126,7 +126,7 @@ namespace test_keras_net
             var pred = mlr_model.Predict(x_mlr);
             if (sw.IsRunning) sw.Stop(); // 시간 측정 끝
             float[] res = pred.GetData<float>();
-            string strResult = string.Format("Result : {0} (Elapsed Time : {1:0.000} [msec])", model_file, sw.ElapsedTicks / Stopwatch.Frequency * 1E3);
+            string strResult = string.Format("Result : {0} (Elapsed Time : {1:0.000} [msec])", res[0], sw.ElapsedTicks / Stopwatch.Frequency * 1E3);
             lblResult.Text = strResult;
         }
 
@@ -172,7 +172,7 @@ namespace test_keras_net
             var pred = bc_model.Predict(x_bc);
             if (sw.IsRunning) sw.Stop(); // 시간 측정 끝
             float[] res = pred.GetData<float>();
-            string strResult = string.Format("Result : {0} (Elapsed Time : {1:0.000} [msec])", model_file, sw.ElapsedTicks / Stopwatch.Frequency * 1E3);
+            string strResult = string.Format("Result : {0} (Elapsed Time : {1:0.000} [msec])", res[0], sw.ElapsedTicks / Stopwatch.Frequency * 1E3);
             lblResult.Text = strResult;
         }
 
